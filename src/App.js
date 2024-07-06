@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-// import {
-//   Route,
-//   BrowserRouter as Router,
-//   Routes
-// } from "react-router-dom";
+import {
+  Route,
+  BrowserRouter as Router,
+  Routes
+} from "react-router-dom";
 import './App.css';
 import About from './components/About';
 import Navbar from './components/Navbar';
@@ -44,17 +44,15 @@ function App() {
 
   return (
     <>
-      {/* <Router> */}
+      <Router>
         <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} toggleModeGreen={toggleModeGreen} toggleModeRed={toggleModeRed} />
         <div className="container my-3">
-          {/* <Routes> */}
-            {/* <Route path="/about" element={<About />} />
-            <Route path="/" element={<TextForm heading="Enter the text to analyze below" mode={mode} />} /> */}
-            <About/>
-            <TextForm heading="Enter the text to analyze below" mode={mode} />
-          {/* </Routes> */}
+          <Routes>
+            <Route path="/about" element={<About />} />
+            <Route path="/" element={<TextForm heading="Enter the text to analyze below" mode={mode} />} />
+           </Routes>
         </div>
-      {/* </Router> */}
+      </Router>
     </>
   );
 }
